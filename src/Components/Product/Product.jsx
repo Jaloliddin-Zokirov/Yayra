@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Product.module.scss";
 import broom from "../../Assets/supurgi.png";
 import { Link } from "react-router-dom";
 import stars from "../../Assets/stars.png";
 import size from "../../Assets/size.png";
+import axios from "axios";
 
 const Product = () => {
   const product = [
@@ -64,6 +65,38 @@ const Product = () => {
       type: "Basin mixer",
     },
   ];
+
+  const [loading, setLoading] = useState(false);
+  const [color, setColor] = useState(null);
+  const sendMessage = (evt) => {
+    evt.preventDefault();
+    setLoading(true);
+    const token = "8056613596:AAGcCMZwLHnzMrwVpVY9ESl64Seh0WdcrHI";
+    const chat_id = "-1002174537471";
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    const messageContent = `Title: Floororganic - 108 \nColor: ${color}`;
+
+    axios({
+      url: url,
+      method: "POST",
+      data: {
+        chat_id: chat_id,
+        text: messageContent,
+      },
+    })
+      .then((res) => {
+        document.getElementById("myForm").reset();
+        alert("Muvaffaqiyatli yuborildi");
+      })
+      .catch((err) => {
+        console.log("Yuborishda xatolik: ", err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <>
       <section className={styles.product}>
@@ -268,14 +301,22 @@ const Product = () => {
                 </button>
               </div>
             </div>
-            <div className={styles.right}>
-              <h2 className={styles.productTitle}>Floororganic - 108</h2>
-              <p className={styles.productDesc}>
+            <form className={styles.right} onSubmit={sendMessage} id="myForm">
+              <h2 className={styles.productTitle} id="title">
+                Floororganic - 108
+              </h2>
+              <p className={styles.productDesc} id="desc">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt et dolore
               </p>
               <img src={stars} alt="" />
-              <button className={styles.buyBtn}>Buy now</button>
+              <button
+                className={styles.buyBtn}
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? "Sending..." : "Buy now"}
+              </button>
 
               <div className="accordion" id="accordionPanelsStayOpenExample">
                 <div className="accordion-item">
@@ -295,13 +336,17 @@ const Product = () => {
                     id="panelsStayOpen-collapseOne"
                     className="accordion-collapse collapse show"
                   >
-                    <div className={`accordion-body ${styles.labelBox}`}>
+                    <div
+                      className={`accordion-body ${styles.labelBox}`}
+                      id="color"
+                      onChange={(evt) => setColor(evt.target.id)}
+                    >
                       <label>
-                        <input type="radio" name="color" />
+                        <input type="radio" name="color" id="black" required />
                         Black
                       </label>
                       <label>
-                        <input type="radio" name="color" />
+                        <input type="radio" name="color" id="white" required />
                         White
                       </label>
                     </div>
@@ -330,7 +375,7 @@ const Product = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
