@@ -1,0 +1,239 @@
+.broom {
+  margin-bottom: 120px;
+}
+
+// .box {
+// }
+
+.inpBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 33px;
+  border-radius: 11.075px;
+  background: #f3f6ff;
+
+  label {
+    width: 100%;
+    max-width: 437px;
+    padding: 12px;
+    color: #05192b;
+    font-family: Hauora;
+    font-size: 22.15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 126.5%;
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+
+  .broomInp,
+  .machalka,
+  .bucket {
+    color: #fff;
+    border-radius: 11.075px;
+    background: #377df1;
+  }
+  label > input {
+    display: none;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  span {
+    display: block;
+    color: #05192b;
+    font-family: Hauora;
+    font-size: 16.169px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 126.5%;
+  }
+  img {
+    margin: 0 auto 114px;
+  }
+
+  .smallImg {
+    width: 163px;
+    height: 160px;
+    margin-bottom: 7px;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0 0 2px;
+    color: #05192b;
+    font-family: Hauora;
+    font-size: 16.612px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 126.5%;
+
+    .sum {
+      font-size: 13.633px;
+      line-height: 30.286px;
+    }
+  }
+  p {
+    margin: 0 0 11px;
+    color: rgba(5, 25, 43, 0.7);
+    font-family: Hauora;
+    font-size: 12.921px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 126.5%;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    .buyBtn {
+      padding: 9px 59px 9px 44px;
+      color: #fff;
+      font-family: Hauora;
+      font-size: 21.559px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 126.5%;
+      border-radius: 10.78px;
+      background: #377df1;
+      border: none;
+    }
+    button {
+      padding: 12px;
+      border-radius: 10.78px;
+      background: #f3f6ff;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .subItemBox {
+    width: 100%;
+    max-width: 488px;
+    display: flex;
+    justify-content: space-between;
+
+    .subItem {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 28px;
+      width: 100%;
+      max-width: 230px;
+    }
+  }
+
+  .subItem2 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 490px;
+    border-radius: 10.78px;
+    background: #f3f6ff;
+    mix-blend-mode: darken;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 185px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 22px 0 20px 23px;
+
+    .title {
+      margin: 0 0 8px;
+      color: #05192b;
+      font-family: Hauora;
+      font-size: 22.15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 126.5%;
+    }
+    .desc {
+      margin: 0 0 86px;
+      color: rgba(5, 25, 43, 0.7);
+      font-family: Hauora;
+      font-size: 12.921px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+    }
+
+    .btn2 {
+      padding: 6px 15px;
+      color: #fff;
+      font-family: Hauora;
+      font-size: 16.612px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      border-radius: 14.766px;
+      background: #377df1;
+      border: none;
+    }
+  }
+  .broom2 {
+    width: 225px;
+    height: 212px;
+    margin: 0;
+  }
+
+  &:nth-child(1) {
+    order: 1;
+  }
+  &:nth-child(2) {
+    order: 3;
+  }
+
+  &:nth-child(3) {
+    width: 100%;
+    max-width: 488px;
+    gap: 28px;
+    order: 2;
+  }
+}
+
+@media only screen and (max-width: 1118px) {
+  .list {
+    justify-content: space-around;
+    gap: 30px;
+    .item:nth-child(1) {
+      order: 1;
+    }
+    .item:nth-child(2) {
+      order: 2;
+    }
+
+    .item:nth-child(3) {
+      order: 3;
+    }
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .inpBox > label {
+    font-size: 16px;
+  }
+
+  .broom2 {
+    width: 165px;
+    height: 152px;
+  }
+}

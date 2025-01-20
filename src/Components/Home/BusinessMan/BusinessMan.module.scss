@@ -1,0 +1,99 @@
+.businessMan {
+  margin-bottom: 120px;
+}
+
+.box {
+  position: relative;
+  padding: 152px 335px 135px;
+  border-radius: 200px 200px 0px 200px;
+  margin: 0 auto;
+  text-align: center;
+
+  &::after {
+    border-radius: 200px 200px 0px 200px;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.5;
+    background: #16012c;
+    content: "";
+  }
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    border-radius: 200px 200px 0px 200px;
+    background-image: url("../../../Assets/BusinessMan.png");
+    content: "";
+  }
+
+  h2 {
+    margin: 0 0 35px;
+    color: #fff;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    letter-spacing: -1.44px;
+  }
+  p {
+    margin: 0 0 20px;
+    color: #fff;
+    text-align: center;
+    font-family: Hauora;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+  }
+
+  button {
+    padding: 18px 54px;
+    color: #fff;
+    text-align: center;
+    font-family: Hauora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    border-radius: 47px;
+    border: none;
+    background-color: #377df1;
+  }
+}
+
+@media only screen and (max-width: 1234px) {
+  .box {
+    padding: 70px 200px 70px;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .box {
+    padding: 70px 115px 70px;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    button {
+      padding: 12px 48px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .box {
+    padding: 40px 90px 40px;
+  }
+}

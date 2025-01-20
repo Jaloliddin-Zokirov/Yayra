@@ -1,0 +1,76 @@
+.handboy {
+  animation: swing ease-in-out 1.3s infinite alternate;
+  transform-origin: 98% 98%;
+  transform-box: fill-box;
+}
+
+.girllight {
+  animation: swing ease-in-out 1.3s infinite alternate;
+  transform-origin: 0% 97%;
+  transform-box: fill-box;
+}
+
+.hairgirl {
+  animation: swinghair ease-in-out 1.3s infinite alternate;
+  transform-origin: 60% 0%;
+  transform-box: fill-box;
+}
+
+.zero {
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+/************* Animations ************/
+@keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes swinghair {
+  0% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+
+/************* Anime.js Configuration ************/
+@at-root {
+  .row svg {
+    animation: anime-row-svg;
+  }
+
+  @keyframes anime-row-svg {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  }
+
+  .zero {
+    animation: anime-zero;
+  }
+
+  @keyframes anime-zero {
+    0% {
+      transform: translateX(0) scale(1) rotateY(0deg);
+    }
+    33% {
+      transform: translateX(10px) scale(1.4);
+    }
+    66% {
+      transform: translateX(-10px) scale(1);
+    }
+    100% {
+      transform: translateX(0) scale(1) rotateY(180deg);
+    }
+  }
+}

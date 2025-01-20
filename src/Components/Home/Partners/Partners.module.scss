@@ -1,0 +1,39 @@
+.partners {
+  margin-bottom: 120px;
+}
+
+.box {
+  padding: 63px 0 73px;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #c4c4c480;
+  span {
+    display: block;
+    margin-bottom: 42px;
+    color: #000;
+    text-align: center;
+    font-family: Hauora;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 45px;
+
+  li > a {
+    display: block;
+    width: 100%;
+    max-width: 137px;
+    text-decoration: none;
+  }
+}

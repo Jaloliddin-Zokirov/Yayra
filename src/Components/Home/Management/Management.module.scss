@@ -1,0 +1,77 @@
+.management {
+  margin-bottom: 120px;
+}
+
+.box {
+  span {
+    display: block;
+    color: #377df1;
+    text-align: center;
+    font-family: Hauora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 0 0 17px;
+    color: #05192b;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    letter-spacing: -1.92px;
+  }
+  p {
+    margin: 0 0 30px;
+    color: #64607d;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: -0.48px;
+  }
+}
+
+.btnBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 11px;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 48px;
+    color: #fff;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 20.226px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 37.925px;
+    letter-spacing: -0.405px;
+    border-radius: 59.415px;
+    background: #377df1;
+    border: none;
+  }
+
+  button:nth-last-child(1) {
+    background: #05192b;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .box {
+    h2 {
+      font-size: 40px;
+    }
+  }
+}
